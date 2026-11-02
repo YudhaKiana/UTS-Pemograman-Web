@@ -8,10 +8,10 @@ Data diambil dari variabel JavaScript pada file terpisah (`js/data.js`).
 
 | | |
 |---|---|
-| **Nama** | [Nama Lengkap] |
-| **NIM** | [NIM] |
+| **Nama** | [YUDHA EKA P] |
+| **NIM** | [312210362] |
 | **Mata Kuliah** | Pemrograman Web 1 |
-| **Video Penjelasan** | [Link video YouTube/Drive] |
+| **Video Penjelasan** | [https://youtu.be/9YeH9TyAKMI?si=QhGB1X4WAPfe5Nj3] |
 | **Demo Online** | [Link GitHub Pages, jika ada] |
 
 ---
