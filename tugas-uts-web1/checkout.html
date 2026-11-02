@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Pemesanan | BukuKita</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="checkout">
+<header class="topbar">
+  <a class="brand" href="dashboard.html">📚 BukuKita</a>
+  <nav aria-label="Navigasi utama">
+    <a href="dashboard.html">Dashboard</a>
+    <a href="stok.html">Katalog</a>
+    <a href="checkout.html">Pemesanan</a>
+    <a href="tracking.html">Tracking</a>
+    <a href="riwayat.html">Riwayat</a>
+    <button id="btn-logout" class="btn btn-small btn-outline">Logout</button>
+  </nav>
+</header>
+<main class="container">
+  <h1>Halaman Pemesanan</h1>
+  <section class="card">
+    <h2>1. Pilih Buku</h2>
+    <div class="grid-form">
+      <div><label for="pilih-buku">Buku</label><select id="pilih-buku"></select></div>
+      <div><label for="pilih-qty">Jumlah</label><input type="number" id="pilih-qty" min="1" value="1"></div>
+      <div class="align-end"><button id="btn-tambah" class="btn btn-block">+ Tambah ke Pesanan</button></div>
+    </div>
+    <div class="table-wrap">
+    <table id="tabel-cart">
+      <thead><tr><th>Judul</th><th>Harga</th><th>Jumlah</th><th>Subtotal</th><th>Aksi</th></tr></thead>
+      <tbody></tbody>
+      <tfoot><tr><th colspan="3">Total</th><th id="total-cart">Rp 0</th><th></th></tr></tfoot>
+    </table></div>
+  </section>
+
+  <form id="form-order" class="card" novalidate>
+    <h2>2. Data Pemesan</h2>
+    <div class="grid-form">
+      <div><label for="o-nama">Nama Lengkap</label><input id="o-nama"></div>
+      <div><label for="o-email">Email</label><input type="email" id="o-email"></div>
+      <div><label for="o-telp">No. Telepon</label><input id="o-telp" placeholder="08xxxxxxxxxx"></div>
+      <div class="span-2"><label for="o-alamat">Alamat Pengiriman</label><textarea id="o-alamat" rows="2"></textarea></div>
+      <div><label for="o-ekspedisi">Ekspedisi</label>
+        <select id="o-ekspedisi"><option>JNE</option><option>J&amp;T</option><option>SiCepat</option><option>Pos Indonesia</option></select></div>
+      <div><label for="o-paket">Jenis Paket</label>
+        <select id="o-paket"><option>Reguler</option><option>Express</option><option>Same Day</option></select></div>
+    </div>
+    <h2>3. Pembayaran</h2>
+    <fieldset class="pay">
+      <legend>Metode Pembayaran</legend>
+      <label><input type="radio" name="metode" value="Transfer Bank" checked> Transfer Bank</label>
+      <label><input type="radio" name="metode" value="E-Wallet"> E-Wallet</label>
+      <label><input type="radio" name="metode" value="COD"> Bayar di Tempat (COD)</label>
+    </fieldset>
+    <p class="error" id="order-error"></p>
+    <button type="submit" class="btn">Buat Pesanan</button>
+  </form>
+</main>
+<div id="modal-alert" class="modal" role="dialog" aria-modal="true" hidden>
+  <div class="modal-box"><h3 id="alert-title">Informasi</h3><p id="alert-msg"></p>
+  <button class="btn" data-close>OK</button></div>
+</div>
+<footer class="footer"><p>&copy; 2026 BukuKita – Tugas UTS Pemrograman Web 1</p></footer>
+<script src="js/data.js"></script>
+<script src="js/script.js"></script>
+</body>
+</html>

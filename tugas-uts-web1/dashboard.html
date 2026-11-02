@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Dashboard | TokoBukuDepan</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="dashboard">
+<header class="topbar">
+  <a class="brand" href="dashboard.html">📚 BukuKita</a>
+  <nav aria-label="Navigasi utama">
+    <a href="dashboard.html">Dashboard</a>
+    <a href="stok.html">Katalog</a>
+    <a href="checkout.html">Pemesanan</a>
+    <a href="tracking.html">Tracking</a>
+    <a href="riwayat.html">Riwayat</a>
+    <button id="btn-logout" class="btn btn-small btn-outline">Logout</button>
+  </nav>
+</header>
+<main class="container">
+  <section class="hero card">
+    <h1 id="greeting">Selamat datang</h1>
+    <p class="muted" id="tanggal-sekarang"></p>
+  </section>
+  <section class="menu-grid" aria-label="Menu utama">
+    <a class="menu-item" href="stok.html"><span>📖</span><h3>Informasi Stok / Katalog</h3><p>Lihat & kelola stok buku</p></a>
+    <a class="menu-item" href="tracking.html"><span>🚚</span><h3>Tracking Pengiriman</h3><p>Lacak pesanan Anda</p></a>
+    <a class="menu-item" href="checkout.html"><span>🧾</span><h3>Laporan Pemesanan</h3><p>Buat & ubah pemesanan</p></a>
+    <a class="menu-item" href="riwayat.html"><span>🕘</span><h3>History Transaksi</h3><p>Riwayat semua transaksi</p></a>
+  </section>
+</main>
+<div id="modal-alert" class="modal" role="dialog" aria-modal="true" hidden>
+  <div class="modal-box"><h3 id="alert-title">Informasi</h3><p id="alert-msg"></p>
+  <button class="btn" data-close>OK</button></div>
+</div>
+<footer class="footer"><p>&copy; 2026 BukuKita – Tugas UTS Pemrograman Web 1</p></footer>
+<script src="js/data.js"></script>
+<script src="js/script.js"></script>
+</body>
+</html>

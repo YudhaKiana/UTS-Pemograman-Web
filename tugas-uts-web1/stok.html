@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Katalog & Stok | BukuKita</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="stok">
+<header class="topbar">
+  <a class="brand" href="dashboard.html">📚 BukuKita</a>
+  <nav aria-label="Navigasi utama">
+    <a href="dashboard.html">Dashboard</a>
+    <a href="stok.html">Katalog</a>
+    <a href="checkout.html">Pemesanan</a>
+    <a href="tracking.html">Tracking</a>
+    <a href="riwayat.html">Riwayat</a>
+    <button id="btn-logout" class="btn btn-small btn-outline">Logout</button>
+  </nav>
+</header>
+<main class="container">
+  <h1>Informasi Stok / Katalog Buku</h1>
+  <section class="card">
+    <h2>Tambah Stok Baru</h2>
+    <form id="form-stok" class="grid-form" novalidate>
+      <div><label for="s-kode">Kode</label><input id="s-kode" placeholder="ASIP4302"></div>
+      <div><label for="s-judul">Judul</label><input id="s-judul"></div>
+      <div><label for="s-kategori">Kategori</label><input id="s-kategori"></div>
+      <div><label for="s-edisi">Edisi</label><input id="s-edisi" placeholder="1"></div>
+      <div><label for="s-harga">Harga (Rp)</label><input type="number" id="s-harga" min="0"></div>
+      <div><label for="s-stok">Stok</label><input type="number" id="s-stok" min="0"></div>
+      <div class="align-end"><button type="submit" class="btn btn-block">+ Tambah</button></div>
+    </form>
+    <p class="error" id="stok-error"></p>
+  </section>
+  <section class="card">
+    <div class="row-between"><h2>Daftar Buku</h2>
+    <input type="search" id="cari-buku" placeholder="Cari judul/kategori..."></div>
+    <div class="table-wrap">
+    <table id="tabel-stok">
+      <thead><tr><th>Cover</th><th>Kode</th><th>Judul</th><th>Kategori</th><th>Harga</th><th>Stok</th><th>Aksi</th></tr></thead>
+      <tbody></tbody>
+    </table></div>
+  </section>
+</main>
+<div id="modal-alert" class="modal" role="dialog" aria-modal="true" hidden>
+  <div class="modal-box"><h3 id="alert-title">Informasi</h3><p id="alert-msg"></p>
+  <button class="btn" data-close>OK</button></div>
+</div>
+<footer class="footer"><p>&copy; 2026 BukuKita – Tugas UTS Pemrograman Web 1</p></footer>
+<script src="js/data.js"></script>
+<script src="js/script.js"></script>
+</body>
+</html>
