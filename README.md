@@ -189,4 +189,4 @@ git push -u origin main
 
 ---
 
-© 2026 [Nama Lengkap] – Tugas UTS Pemrograman Web 1
+© 2026 [YUDHA EKA P] – Tugas UTS Pemrograman Web 1
